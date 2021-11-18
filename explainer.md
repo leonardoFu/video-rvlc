@@ -3,7 +3,7 @@
 # Introduction
 Today,  most of web sites are using `<video src="{file address}">` for media playback, but there is no easy way to access to response information such as video data, HTTP code, error details and so on.
 
-We propose a new `HTMLVideoElement.requestVideoResponseCallback()` method to allow web developers to get response information after <video> sent request to server.
+We propose a new `HTMLVideoElement.requestVideoResponseCallback()` method to allow web developers to get response information after `<video>` sent request to server.
 
 
 # Use cases
@@ -56,5 +56,5 @@ partial interface HTMLVideoElement {
 # Implementation Details
 
 * `video.requestVideoResponseCallback()` callbacks one-off, and must be called again to get the next response.
-* Since request <video> send would some times have client side error occurs, for example network error. In that case, `responseCallback` won't be triggered
+* Since request `<video>` send would some times have client side error occurs, for example network error. In that case, `responseCallback` won't be triggered
 * `responseCallback` is not designed to play with MediaSource and BlobURL, if we are using these API to feed media data to `<video>` `responseCallback` won't be triggered
