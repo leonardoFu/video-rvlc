@@ -1,7 +1,7 @@
 # video.requestVideoLoadCallback() Explainer
 
 # Introduction
-Today,  most of web sites are using <video src="{file address}"> for media playback, but there is no easy way to access to response information such as video data, HTTP code, error details and so on.
+Today,  most of web sites are using `<video src="{file address}" />` for media playback, but there is no easy way to access to response information such as video data, HTTP code, error details and so on.
 
 We propose a new `HTMLVideoElement.requestVideoResponseCallback()` method to allow web developers to get response information after <video> sent request to server.
 
